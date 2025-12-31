@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Care</title>
+    <link rel="stylesheet" href="StyleProject.css">
+
+  <script>
+function showWelcome() {
+    let first = localStorage.getItem("firstname");
+    let last = localStorage.getItem("lastname");
+
+    let welcome = document.getElementById("welcomeText");
+
+    if (welcome && first && last) {
+        welcome.innerHTML = "Welcome " + first + " " + last + " 🌼";
+    }
+}
+window.onload = showWelcome;
+</script>
+
+    <body>
+  <!-- Header -->
+    
+    <header class="header">
+      <div class="logo">
+        <div class="icon">
+          <svg class="heart-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8 2 4 6 4 10c0 7.1 8 12 8 12s8-4.9 8-12c0-4-4-8-8-8z" />
+          </svg>
+        </div>
+        <h1>HopeLine</h1>
+        <!-- ✅ Welcome text -->
+    <span id="welcomeText" class="welcome"></span>
+
+
+      </div>
+
+<nav class="nav">
+        <a href="HomePage.html">Home</a>
+        <a href="About Depression.html">About Depression</a>
+        <a href="Booking.html" >Booking</a>
+        <a href="Selfcare.html" class="active">Self Care</a>
+        <a href="Making-of-HpeLine.html">Making of HopeLine</a>
+        <a href="ourStory.html">Our Story</a>
+      </nav>
+
+
+    </header>
+    <!-- Main Content -->
+    <main class="main">
+      <h2>Help Yourself</h2>
+      <p class="intro">
+        Here, you’ll find guidance and inspiration to understand yourself, take care of your
+        mental health, and keep moving forward through life’s challenges with hope and strength.
+      </p>
+
+      <!-- Videos Section -->
+       <center>
+      <h3 > Helpful Videos</h3>
+    </center>
+      <div class="video-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Video</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Micro Habits That Fuel Depresion</td>
+              <td>
+  <a href="https://www.youtube.com/watch?v=EyC5yJVLlUM" target="_blank">
+    <img 
+      src="https://img.youtube.com/vi/EyC5yJVLlUM/0.jpg"
+      width="300"
+      height="170"
+      alt="Micro Habits That Fuel Depression"
+      style="border-radius:10px; cursor:pointer;">
+  </a>
+</td>
+
+              <td>Educational</td>
+            </tr>
+
+<!--raw 2-->
+            <tr>
+              <td>Self-Care Tips</td>
+              <td>
+  <a href="https://www.youtube.com/watch?v=obOMhiT76jY" target="_blank">
+    <img 
+      src="https://img.youtube.com/vi/obOMhiT76jY/0.jpg"
+      width="300"
+      height="170"
+      alt="Self Care Routine"
+      style="border-radius:10px; cursor:pointer;">
+  </a>
+</td>
+
+           <td>Educational</td>
+           </tr>
+
+            <!--raw 3-->
+            <tr>
+              <td>Overcoming Anxiety</td>
+              <td>
+  <a href="https://www.youtube.com/watch?v=WWloIAQpMcQ" target="_blank">
+    <img 
+      src="https://img.youtube.com/vi/WWloIAQpMcQ/0.jpg" 
+      width="300"
+      height="170"
+      style="border-radius:10px; cursor:pointer;"
+      alt="Overcoming Anxiety Video">
+  </a>
+</td>
+
+              <td>Therapeutic</td>
+            </tr>
+            <!--raw 3-->
+            <tr>
+  <td>You are Strong</td>
+  <td>
+  <a href="https://www.youtube.com/watch?v=AR-86T8jpuQ" target="_blank">
+    <img 
+      src="https://img.youtube.com/vi/AR-86T8jpuQ/0.jpg" 
+      width="300" 
+      height="170"
+      style="border-radius:10px; cursor:pointer;"
+      alt="You are Strong Video">
+  </a>
+</td>
+
+  <td>Motivation</td>
+</tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Articles Section -->
+      <h3> Helpful Articles</h3>
+      <div class="articles">
+        <div class="article">
+          <h4>Understanding Depresion</h4>
+          <p>Depression is a modern reality and a quite common mental illness that more and more people experience at some point in their lives. </p>
+        <a href="https://wirhelfen.eu/en/a-go-to-guide-on-how-to-deal-with-depression-and-sadness/?gad_source=1&gad_campaignid=20846468295&gbraid=0AAAAAqgnCOjPqlZ_lwTbLvJpInvqbHGed&gclid=Cj0KCQiA5abIBhCaARIsAM3-zFWSI0gKg8NpVaOUGFxTaCX1FFq5gWEnthf5F5pP2qMen2DnGZjnJz0aAg7LEALw_wcB">Understanding Depresion</a>
+        </div>
+        <div class="article">
+          <h4>Mental Health</h4>
+          <p>There’s an improv troupe waiting for acknowledgement inside all of us.</p>
+        <a href="https://www.psychologytoday.com/us/blog/live-life-creatively/202505/science-backed-ways-improv-transforms-your-mental-health">Improve your Mental Health</a>
+        </div>
+        <div class="article">
+          <h4>Coping with Anxiety and Depression</h4>
+          
+          <p>Experiencing occasional anxiety is a normal part of life. However, people with anxiety disorders frequently have intense, excessive and persistent worry and fear about everyday situations.</p>
+       <a href="https://www.mayoclinic.org/diseases-conditions/anxiety/symptoms-causes/syc-20350961#:~:text=Common%20anxiety%20signs%20and%20symptoms,Breathing%20rapidly%20(hyperventilation).">Anxiety</a> 
+    </div>
+      </div>
+    </main>
+     <br> <br> <br> <br> <br>
+
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Contact Us</h3>
+    <p>Email: <span>202305409@student.polytechnic.bh <br> 202406461@student.polytechnic.bh <br> 202305020@student.polytechnic.bh</span></p>
+    <p>Phone: <span>+973 3879 7842</span></p>
+  </div>
+
+  
+</footer>
+
+<script src="session.js"></script>
+
+  </body>
+</html>

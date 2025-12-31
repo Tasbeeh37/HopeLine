@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="StyleProject.css" />
+    <title>Home</title>
+
+
+    <script>
+(function () {
+    'use strict'
+
+    window.addEventListener('load', function () {
+        const forms = document.getElementsByClassName('needs-validation');
+
+        Array.from(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                else {
+                    event.preventDefault();
+
+                    let first = document.getElementById("fn").value;
+                    let last = document.getElementById("ln").value;
+
+                    // ✅ Save in LocalStorage
+                    localStorage.setItem("firstname", first);
+                    localStorage.setItem("lastname", last);
+
+                    // Show message immediately
+                    document.getElementById("fln").innerHTML =
+                        "Welcome " + first + " " + last + " 🌼";
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        });
+    });
+})();
+</script>
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <div class="icon">
+            <svg class="heart-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8 2 4 6 4 10c0 7.1 8 12 8 12s8-4.9 8-12c0-4-4-8-8-8z" />
+            </svg>
+        </div>
+        <h1>HopeLine</h1>
+    </div>
+
+    <nav class="nav">
+        <a href="HomePage.html" class="active">Home</a>
+        <a href="About Depression.html">About Depression</a>
+        <a href="Booking.html">Booking</a>
+        <a href="Help YourSelf.html">Help YourSelf</a>
+        <a href="Making-of-HpeLine.html">Making Of HopeLine</a>
+        <a href="ourStory.html">Our Story</a>
+    </nav>
+</header>
+
+<!-- Image Banner -->
+<div class="blurred-bg-container">
+    <img
+        src="https://i.pinimg.com/1200x/0d/bb/70/0dbb7004ac9526657e847b055d7efa4a.jpg"
+        alt="Background"
+        class="blurred-bg"
+    />
+    <div class="text-overlay">
+        <h1 class="title">HopeLine</h1>
+        <p class="ptiltle">Your Site To Improve Your Mental Health</p>
+    </div>
+</div>
+
+<!-- Mission Section: wrapped so yellow background sits outside the white box -->
+<div class="mission-wrapper">
+    <section class="mission-section">
+        <h2 class="mission-title">OverView</h2>
+        <p class="mission-text">
+            HopeLine is aiming to create a safe space for teenagers who suffer from depression.
+            Our goal is to break the stigma around mental health issues by educating and spreading
+            awareness about the struggles that teenagers with depression face. HopeLine offers a
+            free therapy-session booking service that makes reaching mental health professionals
+            accessible to everyone. HopeLine is here to remind you that you are not alone, and that
+            there is a community that cares for and supports you.
+        </p>
+    </section>
+</div>
+
+<!-- Our Services -->
+ <br>
+ <br>
+<h2 class="OS">Our Services</h2>
+
+<div class="container1">
+    <div class="icon-section">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-emoji-frown"
+            viewBox="0 0 16 16"
+        >
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14" />
+            <path
+                d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.5 3.5 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.5 4.5 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25"
+            />
+            <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5" />
+            <path d="M11 6.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5" />
+        </svg>
+        <p>Learn more about depression, its symptoms, and how it affects daily life</p>
+    </div>
+
+    <div class="icon-section">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-laptop"
+            viewBox="0 0 16 16"
+        >
+            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5z" />
+            <path d="M0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+        </svg>
+        <p>Book a free online therapy session with one of our volunteer doctors.</p>
+    </div>
+
+    <div class="icon-section">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-balloon-heart-fill"
+            viewBox="0 0 16 16"
+        >
+            <path d="M8.49 10.92C19.412 3.382 11.28-2.387 8 .986 4.719-2.387-3.413 3.382 7.51 10.92" />
+        </svg>
+        <p>Exercises and practices to help you cope during difficult times.</p>
+    </div>
+</div>
+
+<!-- Registration Form -->
+<div class="container registration-box mt-5 mb-5">
+    <form id="regForm" class="needs-validation" novalidate>
+        <legend class="mb-4 text-center">Register Your Details</legend>
+
+        <div class="mb-3">
+            <label class="form-label" for="fn">First Name</label>
+            <input type="text" class="form-control" id="fn" required minlength="3" />
+            <div class="invalid-feedback">First name must be at least 3 characters.</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="ln">Last Name</label>
+            <input type="text" class="form-control" id="ln" required minlength="3" />
+            <div class="invalid-feedback">Last name must be at least 3 characters.</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="Em">Email</label>
+            <input type="email" class="form-control" id="Em" required />
+            <div class="invalid-feedback">Please enter a valid email.</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="mn">Phone Number (8 digits)</label>
+            <input
+                type="text"
+                class="form-control"
+                id="mn"
+                required
+                minlength="8"
+                maxlength="8"
+                pattern="[0-9]+"
+            />
+            <div class="invalid-feedback">Phone number must be exactly 8 numeric digits.</div>
+        </div>
+
+        <button class="btn-submit w-100" type="submit">Submit</button>
+
+        <h3 class="text-center mt-4" id="fln"></h3>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p>
+            Email:
+            <span>202305409@student.polytechnic.bh</span><br />
+            <span >202406461@student.polytechnic.bh</span><br />
+            <span>202305020@student.polytechnic.bh</span>
+        </p>
+        <p>Phone: <span>+973 3879 7842</span></p>
+    </div>
+
+    
+</footer>
+
+</body>
+</html>

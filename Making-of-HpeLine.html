@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Making of HopeLine</title>
+    <link rel="stylesheet" href="StyleProject.css">
+
+    <script>
+function showWelcome() {
+    let first = localStorage.getItem("firstname");
+    let last = localStorage.getItem("lastname");
+
+    let welcome = document.getElementById("welcomeText");
+
+    if (welcome && first && last) {
+        welcome.innerHTML = "Welcome " + first + " " + last + " 🌼";
+    }
+}
+window.onload = showWelcome;
+</script>
+
+</head>
+
+<body>
+  <!-- Header -->
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="icon">
+          <svg class="heart-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C8 2 4 6 4 10c0 7.1 8 12 8 12s8-4.9 8-12c0-4-4-8-8-8z" />
+          </svg>
+        </div>
+        <h1>HopeLine</h1>
+        <!-- ✅ Welcome text -->
+    <span id="welcomeText" class="welcome"></span>
+      </div>
+
+      <nav class="nav">
+        <a href="HomePage.html">Home</a>
+        <a href="About Depression.html" >About Depression</a>
+        <a href="Booking.html" >Booking</a>
+        <a href="Help YourSelf.html">Help YourSelf</a>
+        <a href="Making-of-HpeLine.html"class="active">Making of HopeLine</a>
+        <a href="ourStory.html">Our Story</a>
+      </nav>
+
+    </header>
+
+</nav>
+
+<div class="container">
+
+<h1>Making Of HopeLine</h1>
+
+<p>
+The website HopeLine was designed as an educational and informational mental-health support platform aimed at teenagers and young adults. The main objective of the website is to provide users with trustworthy mental-health information, emotional encouragement, and access to supportive resources in a safe and friendly environment.
+
+As part of the design process, low-fidelity mock-ups were created using a design tool rather than HTML. These mock-ups were used to plan the layout, navigation structure, and content organization before the development stage began. This approach helped the group visualize the website structure, identify potential design issues early, and ensure a consistent user experience across all pages.
+</p>
+
+<h2>Website Color Palette</h2>
+
+<div class="mockup">
+    <img src="Images/Colors.jpg" alt="HopeLine Color Palette">
+
+    <div class="justification">
+        <h3>Color Design Justification</h3>
+
+        <p>
+These colors directly influence how users emotionally interact with the website. 
+Using soft blue tones reduces anxiety, while yellow introduces optimism, helping teenagers feel safe and encouraged.
+</p>
+
+
+        <ul>
+            <li><strong>Light Blue (#B3E5FC):</strong> 
+            Represents calmness, peace, and emotional comfort. It helps users feel relaxed when visiting the website.</li>
+
+            <li><strong>Dark Blue (#0056B3 / #0277BD):</strong> 
+            Symbolizes trust, confidence, and reliability. This color is mainly used in navigation bars and titles to build professional credibility.</li>
+
+            <li><strong>Soft Yellow (#FFD54F):</strong> 
+            Represents hope, warmth, and positivity. It is used as an accent color to give emotional encouragement.</li>
+        </ul>
+
+        <p>
+        This combination was chosen to avoid harsh colors and ensure that users feel emotionally safe and supported while browsing the website.
+        </p>
+    </div>
+</div>
+
+
+<!-- ================== MOCKUP 1 ================== -->
+<h2>Mock-up 1: Home Page</h2>
+<div class="mockup">
+<img src="Images/Home.png" alt="Home page mockup">
+<div class="justification">
+<h3>Design Justification</h3>
+<p>
+The home page was designed to feel welcoming and emotionally safe.
+A hero image was placed at the top to create a positive emotional connection with users.
+Soft blue and yellow colors were chosen because blue represents calm and trust, while yellow represents hope and positivity.
+</p>
+
+
+<h3>Code Justification</h3>
+<p>
+Semantic HTML elements such as header and nav were used to organize the page properly.
+CSS controls the design and layout, while Bootstrap helps make the page responsive on different devices.
+JavaScript localStorage is used to save and display the user’s name across pages.
+This structure makes the website easier to maintain and update in the future.
+</p>
+
+</div>
+</div>
+
+<!-- ================== MOCKUP 2 ================== -->
+<h2>Mock-up 2: About Depression Page</h2>
+<div class="mockup">
+<img src="Images/About Depresion.png" alt="About page mockup">
+<div class="justification">
+<h3>Design Justification</h3>
+<p>
+The page layout is simple and easy to read.
+Clear headings divide the content into sections to avoid overwhelming the users with too much information.
+</p>
+
+
+<h3>Code Justification</h3>
+<p>
+HTML headings create a clear structure for the content, while CSS keeps the design consistent.
+Only necessary JavaScript is used to keep the page loading fast.
+This makes the page easier to update and maintain in the future.
+</p>
+
+</div>
+</div>
+
+
+
+<!-- ================== MOCKUP 3 ================== -->
+<h2>Mock-up 4: Booking Page</h2>
+<div class="mockup">
+<img src="Images/Booking 1.png" alt="Booking mockup">
+<img src="Images/Confirm Booking.png" alt="confirm Booking">
+<div class="justification">
+<h3>Design Justification</h3>
+<p>
+The first mock-up shows the available appointments in a table to help users choose easily.
+The second mock-up focuses on a simple form layout for confirming the booking.
+Clear labels and spacing reduce confusion and make the process user-friendly.
+</p>
+
+<h3>Code Justification</h3>
+<p>
+HTML forms structure the booking process, while CSS ensures a consistent layout.
+JavaScript handles validation and confirmation alerts.
+This organized structure makes future updates easy and allows reuse of form components.
+</p>
+
+</div>
+</div>
+
+<!-- ================== MOCKUP 4 ================== -->
+<h2>Mock-up 3: Help YourSelf Page</h2>
+<div class="mockup">
+<img src="Images/Help YourSelf.png" alt="Self care mockup">
+<div class="justification">
+<h3>Design Justification</h3>
+<p>
+Card-style layouts with icons make self-care activities visually easier to follow and more engaging for users. 
+
+</p>
+
+<h3>Code Justification</h3>
+<p>
+Bootstrap cards help with layout consistency and responsiveness. CSS hover effects add interaction feedback.
+Maintainability is improved by separating structure, styling, and logic.
+</p>
+</div>
+</div>
+
+
+<!-- ================== MOCKUP 5 ================== -->
+<h2>Mock-up 6: Making Of HopeLine</h2>
+<div class="mockup">
+<img src="Images/Making of HopeLine.png" alt="Making of mockup">
+
+<div class="justification">
+<h3>Design Justification</h3>
+<p>
+This page clearly explains the design decisions and development process.
+The layout is simple so users can focus on the documentation.
+</p>
+
+<h3>Code Justification</h3>
+<p>
+Semantic HTML and reusable CSS classes improve maintainability.
+The structure allows easy updates and future page additions.
+</p>
+
+</div>
+</div>
+
+<!-- ================== MOCKUP 6 ================== -->
+<h2>Mock-up 5: Our Story Page</h2>
+<div class="mockup">
+<img src="Images/Our Story.png" alt="Story mockup">
+<div class="justification">
+<h3>Design Justification</h3>
+<p>
+The page uses a storytelling layout to guide the reader through the journey of the project from beginning to end.
+Large headings and separated sections make each part easy to read.
+A calm color theme supports emotional connection and keeps the page comfortable for long reading.
+</p>
+
+<h3>Code Justification</h3>
+<p>
+HTML sectioning elements are used to divide the content into logical parts such as introduction, challenges, learning, and conclusion.
+CSS controls text size, spacing, and alignment to improve readability.
+Reusable classes and consistent structure help maintain the page and make updates easy.
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Contact Us</h3>
+    <p>Email: <span>202305409@student.polytechnic.bh <br> 202406461@student.polytechnic.bh <br> 202305020@student.polytechnic.bh</span></p>
+    <p>Phone: <span>+973 3879 7842</span></p>
+  </div>
+</footer>
+</body>
+</html>

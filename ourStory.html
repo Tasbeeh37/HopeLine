@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Story - HopeLine</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="StyleProject.css" />
+
+  <script>
+function showWelcome() {
+    let first = localStorage.getItem("firstname");
+    let last = localStorage.getItem("lastname");
+
+    let welcome = document.getElementById("welcomeText");
+
+    if (welcome && first && last) {
+        welcome.innerHTML = "Welcome " + first + " " + last + " 🌼";
+    }
+}
+window.onload = showWelcome;
+</script>
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="logo">
+    <div class="icon">
+      <svg class="heart-icon" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2C8 2 4 6 4 10c0 7.1 8 12 8 12s8-4.9 8-12c0-4-4-8-8-8z" />
+      </svg>
+    </div>
+    <h1>HopeLine</h1>
+    <!-- ✅ Welcome text -->
+    <span id="welcomeText" class="welcome"></span>
+  </div>
+
+  <nav class="nav">
+    <a href="HomePage.html">Home</a>
+    <a href="About Depression.html">About Depression</a>
+    <a href="Booking.html">Booking</a>
+    <a href="Help YourSelf.html">Help YourSelf</a>
+    <a href="Making-of-HpeLine.html">Making of HopeLine</a>
+    <a href="ourStory.html" class="active">Our Story</a>
+  </nav>
+</header>
+
+<!-- Main content -->
+<div class="content-box container mt-5 mb-5">
+
+  <h1><strong>Our Story</strong></h1>
+
+  <p>
+    Our project, called <strong>HopeLine</strong>, was created to help and support teenagers who suffer from
+    depression and may not have access to professional mental health care. Many teenagers feel uncomfortable
+    asking for help or cannot afford therapy sessions, so we wanted to build a safe and friendly website where
+    they could learn about their feelings, understand mental health issues, and find emotional support.
+  </p>
+
+  <p>
+    The website includes a short test to help users understand their condition, helpful educational articles,
+    and the ability to book free therapy sessions with volunteer therapists. Working on this project allowed us
+    to combine creativity and technology for a meaningful purpose.
+  </p>
+
+  <hr />
+
+  <h2>How the Project Started</h2>
+
+  <p>
+    Our first task was to choose a topic that was both meaningful and useful to our community. After discussing
+    several ideas, we agreed to focus on teenagers’ mental health. Depression among young people is increasing,
+    and many teens suffer in silence. We believed that creating a supportive online platform could make a real
+    difference.
+  </p>
+
+  <p>
+    As part of the project requirements, we developed a multi-page website using HTML, CSS, JavaScript,
+    Bootstrap, and Figma. Our website includes:
+  </p>
+
+  <ul>
+    <li>A Home Page that introduces our mission and services and includes a validation-based registration form.</li>
+    <li>Three topic pages that explain depression, provide booking services, and offer self-care resources such as videos and articles.</li>
+    <li>A Making Of page that explains our design choices, mock-ups, and technical decisions.</li>
+    <li>An Our Story page (this page) reflecting on our journey.</li>
+  </ul>
+
+  <hr />
+
+  <h2>Challenges We Faced</h2>
+
+  <p><strong>Small team size:</strong>  
+    Our group only had three members, which meant that each person had to handle several responsibilities.
+    Balancing design work, development, and academics was difficult at times.
+  </p>
+
+  <p><strong>How we solved it:</strong>  
+    We divided the tasks based on individual strengths and supported one another throughout the project.
+    Good communication helped us manage the workload effectively.
+  </p>
+
+  <p><strong>Design challenges:</strong>  
+    We wanted the website to feel calming and supportive without being overwhelming. Choosing the right colors
+    and layout required careful thought.
+  </p>
+
+  <p><strong>How we solved it:</strong>  
+    We researched color psychology, watched tutorials, and tested multiple designs in Figma before settling on
+    a calm and welcoming theme.
+  </p>
+
+  <p><strong>Technical difficulties:</strong>  
+    Using JavaScript for validation and organizing our HTML and CSS code was challenging at times. Small errors
+    caused layout and form issues.
+  </p>
+
+  <p><strong>How we solved it:</strong>  
+    We used debugging tools, searched for solutions online, watched tutorials, and asked tutors for guidance.
+  </p>
+
+  <hr />
+
+  <h2>What We Learned</h2>
+
+  <p>
+    This project improved our technical skills in:
+  </p>
+
+  <ul>
+    <li>HTML structure and layout</li>
+    <li>CSS styling and responsiveness</li>
+    <li>JavaScript form validation</li>
+    <li>Bootstrap components</li>
+    <li>Mock-up design using Figma</li>
+  </ul>
+
+  <p>
+    We also learned the importance of communication, teamwork, and organisation. Each member’s contribution
+    was vital to the project’s success.
+  </p>
+
+  <p>
+    When problems occurred, we did not panic. Instead, we tested solutions patiently and learned from our
+    mistakes.
+  </p>
+
+  <hr />
+
+  <h2>Conclusion</h2>
+
+  <p>
+    In conclusion, HopeLine was more than a technical project; it was a meaningful journey. Despite challenges
+    such as a small team and technical difficulties, we succeeded through cooperation and persistence.
+  </p>
+
+  <p>
+    Most importantly, this project reminded us that technology can be used to support mental health awareness
+    and help others. HopeLine represents care, hope, and a reminder that no one has to struggle alone.
+  </p>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Contact Us</h3>
+    <p>
+      Email:<br />
+      <span>202305409@student.polytechnic.bh</span><br />
+      <span>202406461@student.polytechnic.bh</span><br />
+      <span>202305020@student.polytechnic.bh</span>
+    </p>
+    <p>Phone: <span>+973 3879 7842</span></p>
+  </div>
+</footer>
+
+<script src="session.js"></script>
+
+</body>
+</html>

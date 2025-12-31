@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Your Session</title>
+  <link rel="stylesheet" href="StyleProject.css" />
+  <script>
+function showWelcome() {
+    let first = localStorage.getItem("firstname");
+    let last = localStorage.getItem("lastname");
+
+    let welcome = document.getElementById("welcomeText");
+
+    if (welcome && first && last) {
+        welcome.innerHTML = "Welcome " + first + " " + last + " 🌼";
+    }
+}
+window.onload = showWelcome;
+</script>
+
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <div class="icon">
+        <svg class="heart-icon" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C8 2 4 6 4 10c0 7.1 8 12 8 12s8-4.9 8-12c0-4-4-8-8-8z" />
+        </svg>
+      </div>
+      <h1>HopeLine</h1>
+      <!-- ✅ Welcome text -->
+    <span id="welcomeText" class="welcome"></span>
+    </div>
+
+    <nav class="nav">
+      <a href="HomePage.html">Home</a>
+      <a href="About Depression.html">About Depression</a>
+      <a href="Booking.html" class="active">Booking</a>
+      <a href="Help YourSelf.html">Help YourSelf</a>
+      <a href="Making-of-page.html">Making Of page</a>
+      <a href="ourStory.html">Our Story</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="intro">
+    <h2>Book Your Therapy Appointment</h2>
+    <p class="intro">
+      Schedule a free, confidential consultation with our volunteer specialists to help you
+      understand and manage your emotions.
+    </p>
+     </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dr. Mohammed Salah</td>
+            <td>Depression support</td>
+            <td>2025-07-20</td>
+            <td>10:00 AM</td>
+            <td><button class="btn-submit" onclick="openModal(this, 'Dr. Mohammed Salah', '2025-07-20', '10:00 AM')">Book</button></td>
+          </tr>
+          <tr>
+            <td>Dr. Ahmed Shawqi</td>
+            <td>Academic stress</td>
+            <td>2025-07-21</td>
+            <td>2:00 PM</td>
+            <td><button class="btn-submit" onclick="openModal(this, 'Dr. Ahmed Shawqi', '2025-07-21', '2:00 PM')">Book</button></td>
+          </tr>
+          <tr>
+            <td>Dr. Nancy Ajram</td>
+            <td>Child Psychology(Study Problems)</td>
+            <td>2025-07-22</td>
+            <td>11:00 AM</td>
+            <td><button class="btn-submit" onclick="openModal(this, 'Dr. Nancy Ajram', '2025-07-22', '11:00 AM')">Book</button></td>
+          </tr>
+          <tr>
+            <td>Dr. Ali Hassan</td>
+            <td>Family issues</td>
+            <td>2025-07-23</td>
+            <td>5:00 PM</td>
+            <td><button class="btn-submit" onclick="openModal(this, 'Dr. Ali Hassan', '2025-07-23', '5:00 PM')">Book</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="bookingModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()" aria-label="Close">&times;</span>
+        <h2 id="modalTitle">Confirm Your Booking</h2>
+        <form id="bookingForm">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name" />
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required autocomplete="family-name" />
+
+          <p><strong>Doctor:</strong> <span id="modalDoctor"></span></p>
+          <p><strong>Date:</strong> <span id="modalDate"></span></p>
+          <p><strong>Time:</strong> <span id="modalTime"></span></p>
+
+          <label for="notes">Additional Notes:</label>
+          <textarea id="notes" name="notes" placeholder="Optional"></textarea>
+
+          <button type="submit">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+
+    <h3 id="statusMessage" style="color: #f9a825;"></h3>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p>
+            Email:
+            <span>202305409@student.polytechnic.bh</span><br />
+            <span>202406461@student.polytechnic.bh</span><br />
+            <span>202305020@student.polytechnic.bh</span>
+        </p>
+        <p>Phone: <span>+973 3879 7842</span></p>
+    </div>
+</footer>
+<script>
+let selectedBooking = null;
+    let selectedButton = null;
+
+    function openModal(button, doctor, date, time) {
+      selectedButton = button;
+      selectedBooking = { doctor, date, time };
+
+      document.getElementById('modalDoctor').textContent = doctor;
+      document.getElementById('modalDate').textContent = date;
+      document.getElementById('modalTime').textContent = time;
+
+      // Clear previous input values
+      document.getElementById('firstName').value = '';
+      document.getElementById('lastName').value = '';
+      document.getElementById('notes').value = '';
+
+      document.getElementById('bookingModal').style.display = 'flex';
+      document.getElementById('bookingModal').setAttribute('aria-hidden', 'false');
+    }
+
+    function closeModal() {
+      document.getElementById('bookingModal').style.display = 'none';
+      document.getElementById('bookingModal').setAttribute('aria-hidden', 'true');
+    }
+
+    document.getElementById('bookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+
+      if (!firstName || !lastName) {
+        alert('Please enter both your first and last name.');
+        return;
+      }
+
+      const statusMessage = document.getElementById('statusMessage');
+      statusMessage.textContent = `Booking confirmed for ${firstName} ${lastName} with ${selectedBooking.doctor} on ${selectedBooking.date} at ${selectedBooking.time}.`;
+
+      if (notes) {
+        statusMessage.textContent += ` Notes: ${notes}`;
+      }
+
+      selectedButton.textContent = 'Booked';
+      selectedButton.disabled = true;
+      selectedButton.classList.add('btn-booked');
+
+      closeModal();
+    });
+    window.addEventListener('keydown', function (event) {
+      const modal = document.getElementById('bookingModal');
+      if (event.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    });</script>
+
+
+</body>
+</html>
